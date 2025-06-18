@@ -1324,7 +1324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dylan Curry
+  m_text: Amy Curry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
   m_sharedMaterial: {fileID: -7781264453588454885, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
@@ -1596,7 +1596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dylan Curry
+  m_text: Amy Curry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
   m_sharedMaterial: {fileID: -7781264453588454885, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
@@ -2834,7 +2834,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dylan Curry
+  m_text: Amy Curry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
   m_sharedMaterial: {fileID: -7781264453588454885, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
@@ -4068,7 +4068,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dylan Curry
+  m_text: Amy Curry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
   m_sharedMaterial: {fileID: -7781264453588454885, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
@@ -4719,7 +4719,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dylan Curry
+  m_text: Amy Curry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
   m_sharedMaterial: {fileID: -7781264453588454885, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
@@ -5413,7 +5413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dylan Curry
+  m_text: Amy Curry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
   m_sharedMaterial: {fileID: -7781264453588454885, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
@@ -5918,7 +5918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dylan Curry
+  m_text: Amy Curry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
   m_sharedMaterial: {fileID: -7781264453588454885, guid: 73e59798cda30471e9c5dc8a1b59df8d, type: 2}
