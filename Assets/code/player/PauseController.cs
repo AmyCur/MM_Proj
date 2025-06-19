@@ -37,5 +37,5 @@ public class PauseController : MonoBehaviour
         if (shouldPause)
             if (paused) UnPause();
             else Pause();
-    }
-}
+                                           
+}}
