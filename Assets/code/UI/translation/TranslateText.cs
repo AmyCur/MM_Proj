@@ -1,11 +1,15 @@
 using UnityEngine;
-using TMPro;
+using AmyCurr.Settings;
 
 public class TranslateText : MonoBehaviour
 {
-  TMP_Text text;
+    public string english;
+    public string spanish;
+    public string french;
+    public string german;
 
-  void Start(){
-    text = GetComponent<TMP_Text>();
-  }
+    void Start()
+    {
+        Settings.Language.ChangeLanguage(Settings.Language.language);
+    }
 }

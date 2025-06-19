@@ -25,6 +25,8 @@ namespace Magical
         public static KeyCode[] killAllKey = { KeyCode.LeftBracket };
 
         public static KeyCode[] goToSpawnKey = { KeyCode.F6 };
+
+        public static KeyCode[] pause = { KeyCode.Escape };
         // public static KeyCode[] respawnKey = {KeyCode.}
     }
 

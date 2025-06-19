@@ -1,6 +1,5 @@
 // This is where I store all of the awesome constants that are used over a load of scripts and other important things
 
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Globals
@@ -14,11 +13,11 @@ namespace Globals
         public const string projTag = "Projectile";
         public const string imgTag = "damage_image";
         public const string deathScreenTag = "death_menu";
+        public const string languageTextTag = "language_text";
 
         // This contains the max range for AI's when raycasting
         public const float maxAiCheckRange = 10000f;
 
         public static readonly LayerMask enemyMask = 64;
-
     }
 }

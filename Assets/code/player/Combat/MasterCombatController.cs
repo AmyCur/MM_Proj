@@ -89,7 +89,8 @@ namespace MasterCombatController            // This is a namespace so it can be 
                 if (data.attackerName == Attacker.player)
                 {
                     var cc = mas.player.GetCombatController();
-                    sman.PlaySound(cc.bowshoot, out _, cc.GetComponent<AudioSource>());
+                    if (!cc.gameObject.GetComponent<PauseController>().paused)
+                        sman.PlaySound(cc.bowshoot, out _, cc.GetComponent<AudioSource>());
                 }
                 if (mask != null)
                 {

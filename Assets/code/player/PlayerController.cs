@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     #region Variables
     public state s = state.walking;
     public AdminState aS = AdminState.standard;
+    [HideInInspector] public bool canRotate = true;
 
     [Header("Camera")]
     [Range(1, 4)] public float mouseSensitivityX = 2.0f;
@@ -404,15 +405,19 @@ public class PlayerController : MonoBehaviour
     // Handles Mouse Movement
     void HandleMouse()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivityX;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivityY;
 
-        transform.Rotate(Vector3.up * mouseX);
+        if (canRotate)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivityX;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivityY;
 
-        currentXRotation -= mouseY;
-        currentXRotation = Mathf.Clamp(currentXRotation, minY, maxY);
+            transform.Rotate(Vector3.up * mouseX);
 
-        playerCamera.transform.localRotation = Quaternion.Euler(currentXRotation, 0f, 0f);
+            currentXRotation -= mouseY;
+            currentXRotation = Mathf.Clamp(currentXRotation, minY, maxY);
+
+            playerCamera.transform.localRotation = Quaternion.Euler(currentXRotation, 0f, 0f);
+        }
     }
 
     // Sets Movement Direction

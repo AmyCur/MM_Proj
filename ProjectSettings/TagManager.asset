@@ -11,6 +11,7 @@ TagManager:
   - Holder
   - damage_image
   - death_menu
+  - language_text
   layers:
   - Default
   - TransparentFX
