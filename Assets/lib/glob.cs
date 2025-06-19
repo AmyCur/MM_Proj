@@ -19,5 +19,6 @@ namespace Globals
         public const float maxAiCheckRange = 10000f;
 
         public static readonly LayerMask enemyMask = 64;
+
     }
 }
