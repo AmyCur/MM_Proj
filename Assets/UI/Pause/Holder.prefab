@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 3429329254029365031}
   - component: {fileID: 7589048623459480456}
   - component: {fileID: 3178962352189111417}
+  - component: {fileID: 1040300186696654026}
   m_Layer: 5
   m_Name: H_QuitText
   m_TagString: Untagged
@@ -289,6 +290,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1040300186696654026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354978421131112784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Quit
+  spanish: Dejar
+  french: Quitter
+  german: "Aufh\xF6ren"
 --- !u!1 &360461986474878514
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +532,7 @@ GameObject:
   - component: {fileID: 7481532950529302887}
   - component: {fileID: 3756659226157621385}
   - component: {fileID: 7461491142897891814}
+  - component: {fileID: 644071469970965488}
   m_Layer: 5
   m_Name: AnimText
   m_TagString: Untagged
@@ -640,6 +658,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &644071469970965488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475754677285310749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Back
+  spanish: Volver
+  french: Revenir
+  german: "Geh zur\xFCck"
 --- !u!1 &504716940689200672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,6 +1040,7 @@ GameObject:
   - component: {fileID: 2442175700483377592}
   - component: {fileID: 5896033234461079093}
   - component: {fileID: 8708477538395637316}
+  - component: {fileID: 6997595666784404337}
   m_Layer: 5
   m_Name: H_StartButton
   m_TagString: Untagged
@@ -1115,9 +1150,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
-        m_MethodName: UnPause
+      - m_Target: {fileID: 6997595666784404337}
+        m_TargetAssemblyTypeName: ResumeGame, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1203,6 +1238,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172579635d251ca5185ad6e868230383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6997595666784404337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986235188738352236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66428a3311924a644b17d92d187018b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1148730999255831213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,6 +1261,7 @@ GameObject:
   - component: {fileID: 5176568824810570992}
   - component: {fileID: 6999169842295437200}
   - component: {fileID: 2120569159934690483}
+  - component: {fileID: 3501690925942938988}
   m_Layer: 5
   m_Name: S_LanguageText
   m_TagString: Untagged
@@ -1339,6 +1387,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3501690925942938988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148730999255831213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Language
+  spanish: idioma
+  french: Langue
+  german: Sprache
 --- !u!1 &1260239701947041942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,6 +1550,7 @@ GameObject:
   - component: {fileID: 7751768417641215871}
   - component: {fileID: 6773133608283314722}
   - component: {fileID: 7212578521285941568}
+  - component: {fileID: 2792132559074949152}
   m_Layer: 5
   m_Name: LanguageText
   m_TagString: Untagged
@@ -1611,6 +1676,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2792132559074949152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408943505718396899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: "Spanish (Espa\xF1ol)"
+  spanish: "Espa\xF1ol"
+  french: "Espagnol (Espa\xF1ol)"
+  german: "Spanisch (Espa\xF1ol)"
 --- !u!1 &1555179396197258202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,6 +1850,7 @@ GameObject:
   - component: {fileID: 6956011088800347019}
   - component: {fileID: 8152040126073805457}
   - component: {fileID: 20354633488754887}
+  - component: {fileID: 5388899442086272810}
   m_Layer: 5
   m_Name: LanguageText
   m_TagString: Untagged
@@ -1896,6 +1978,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5388899442086272810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589429850352496648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: English
+  spanish: "\xCDngles (English)"
+  french: Anglaise (English)
+  german: Englisch (English)
 --- !u!1 &1593812548103220838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,6 +2275,7 @@ GameObject:
   - component: {fileID: 4096500728513811547}
   - component: {fileID: 435020925709256328}
   - component: {fileID: 6332711422189296343}
+  - component: {fileID: 4979981284697748732}
   m_Layer: 5
   m_Name: H_SettingsText
   m_TagString: Untagged
@@ -2302,6 +2401,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4979981284697748732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137039381429660042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Settings
+  spanish: Ajustes
+  french: "Param\xE8tres"
+  german: Einstellungen
 --- !u!1 &2172156799896208296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,6 +2428,7 @@ GameObject:
   - component: {fileID: 4404366723927165362}
   - component: {fileID: 1027179610071308810}
   - component: {fileID: 300422377050894049}
+  - component: {fileID: 440434244116951334}
   m_Layer: 5
   m_Name: G_BackText
   m_TagString: Untagged
@@ -2438,6 +2554,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &440434244116951334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2172156799896208296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Back
+  spanish: Volver
+  french: Revenir
+  german: "Geh zur\xFCck"
 --- !u!1 &2179115777566152028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,7 +3104,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1020704337246520614}
         m_TargetAssemblyTypeName: SlideOnPress, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Slide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3219,6 +3351,7 @@ GameObject:
   - component: {fileID: 2080240292628834311}
   - component: {fileID: 2560750020611265060}
   - component: {fileID: 7410302440605674115}
+  - component: {fileID: 665848253019009000}
   m_Layer: 5
   m_Name: S_GraphicsText
   m_TagString: Untagged
@@ -3344,6 +3477,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &665848253019009000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209041652197474852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Graphics
+  spanish: "Gr\xE1ficos"
+  french: Graphique
+  german: Grafik
 --- !u!1 &3450835089615777365
 GameObject:
   m_ObjectHideFlags: 0
@@ -4608,6 +4757,7 @@ GameObject:
   - component: {fileID: 4490528196304813687}
   - component: {fileID: 131708157871950075}
   - component: {fileID: 1866178278176232972}
+  - component: {fileID: 7387954167519209945}
   m_Layer: 5
   m_Name: LanguageText
   m_TagString: Untagged
@@ -4733,6 +4883,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7387954167519209945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422212817000890606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: "French (Fran\xE7ais)"
+  spanish: "Franc\xE9s (Fran\xE7ais)"
+  french: "Fran\xE7ais"
+  german: "Franz\xF6sisch"
 --- !u!1 &4575020371437026982
 GameObject:
   m_ObjectHideFlags: 0
@@ -4760,7 +4926,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 402.9133, y: -55.543137, z: -90.28868}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.49625, y: 1.49625, z: 1.49625}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6011117725209097866}
@@ -4935,6 +5101,7 @@ GameObject:
   - component: {fileID: 851119757039441843}
   - component: {fileID: 5885021525706462084}
   - component: {fileID: 5386239235869526119}
+  - component: {fileID: 5648882148747502550}
   m_Layer: 5
   m_Name: H_StartText
   m_TagString: Untagged
@@ -5060,6 +5227,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5648882148747502550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4956732434531552721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Resume
+  spanish: Reprendre
+  french: Reanudar
+  german: Fortsetzen
 --- !u!1 &5045221668389534402
 GameObject:
   m_ObjectHideFlags: 0
@@ -5346,6 +5529,7 @@ GameObject:
   - component: {fileID: 6629437328014445365}
   - component: {fileID: 9170627985280661165}
   - component: {fileID: 6541031294134819968}
+  - component: {fileID: 2069226305851008743}
   m_Layer: 5
   m_Name: H_QuitButton
   m_TagString: Untagged
@@ -5455,9 +5639,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
-        m_MethodName: UnPause
+      - m_Target: {fileID: 2069226305851008743}
+        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5531,6 +5715,18 @@ MonoBehaviour:
     mult: 1.05
     textSize: 0
     targetSize: 0
+--- !u!114 &2069226305851008743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5362832404037837611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8834927b708a87e46b95f9814e2c2117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5377318044491815632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5618,6 +5814,7 @@ GameObject:
   - component: {fileID: 6814159766989175241}
   - component: {fileID: 3795691631818778748}
   - component: {fileID: 7467773872056867401}
+  - component: {fileID: 8181455753401224969}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5743,6 +5940,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8181455753401224969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5552769251398042358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Credits
+  spanish: "Cr\xE9ditos"
+  french: "Cr\xE9dits"
+  german: Credits
 --- !u!1 &5888266123879475768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5754,6 +5967,7 @@ GameObject:
   - component: {fileID: 3197399620363711079}
   - component: {fileID: 5437442673493578417}
   - component: {fileID: 6321408855176469254}
+  - component: {fileID: 4617173556725692729}
   m_Layer: 5
   m_Name: L_BackText
   m_TagString: Untagged
@@ -5879,6 +6093,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4617173556725692729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888266123879475768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Back
+  spanish: Volver
+  french: Revenir
+  german: "Geh zur\xFCck"
 --- !u!1 &6029261813171528626
 GameObject:
   m_ObjectHideFlags: 0
@@ -7858,6 +8088,7 @@ GameObject:
   - component: {fileID: 1636226229968224190}
   - component: {fileID: 7948920914297919504}
   - component: {fileID: 7689285249315509654}
+  - component: {fileID: 5753937179389496605}
   m_Layer: 5
   m_Name: S_BackText
   m_TagString: Untagged
@@ -7983,6 +8214,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5753937179389496605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559718320136811658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76172a88270ac634dbe0451a1a1a478c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  english: Back
+  spanish: Volver
+  french: Revenir
+  german: "Geh zur\xFCck"
 --- !u!1 &8690590238680462639
 GameObject:
   m_ObjectHideFlags: 0

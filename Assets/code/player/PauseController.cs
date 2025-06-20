@@ -11,8 +11,9 @@ public class PauseController : MonoBehaviour
 
     void Pause()
     {
-        menu = GameObject.Instantiate(pauseMenu, Vector3.zero, Quaternion.identity);
+        menu = GameObject.Instantiate(pauseMenu, new(402.9133f, -55.54314f, -90.28868f), Quaternion.identity);
         menu.transform.SetParent(HUD.transform, true);
+        menu.transform.localPosition=new(402.9133f, -55.54314f, -90.28868f);
         // menu.transform.position = new(transform.position.x+648.2353f+550f, transform.position.y + 182f, 0);
 
         Debug.Log("Pause");
