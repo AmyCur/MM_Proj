@@ -89,6 +89,9 @@ public abstract class BaseEnemy : MonoBehaviour
     public List<AudioClip> audios;
     CombatController cc;
 
+    [Header("Animation")]
+
+    public Animator anim = new();
 
     #endregion
     #region Abstract Functions
@@ -121,6 +124,46 @@ public abstract class BaseEnemy : MonoBehaviour
 
     const float checkWidth = 0.3f;
     const float checkHeight = 0.8f;
+
+    void LookAtPlayer()
+    {
+
+        Quaternion lookRotation = Quaternion.LookRotation((player.transform.position - transform.position).normalized);
+        lookRotation = new(0, lookRotation.y, 0, lookRotation.w);
+        //instant
+        transform.rotation = lookRotation;
+
+        //     Vector3 pos = transform.position;
+        //     Vector3 playerPos = player.transform.position;
+        //
+        //     Vector3 a = playerPos - pos;
+        //     a = a.normalized;
+        //
+        //
+        //     // Rotate along y
+        //
+        //     Vector2 b = new();
+        //
+        //     if (a.y > 0) b = Vector2.up;
+        //     else b = Vector2.down;
+        //
+        //     float top = (a.x * b.x) + (a.y * b.y);
+        //     float bottom = Mathf.Sqrt(
+        //         Mathf.Pow(a.x, 2) + Mathf.Pow(b.x, 2)
+        //     );
+        //     float tb = (top / bottom);
+        //
+        //     if (a.x < 0)
+        //     {
+        //         tb -= 360;
+        //     }
+        //
+        //     tb *= Mathf.Deg2Rad;
+        //
+        //     float theta = Mathf.Acos(tb);
+        //     Debug.Log($"theta in rad: {Math.Round(theta, 2)} | theta in def{Math.Round(theta * 180 / Mathf.PI, 2)}");
+        //     transform.rotation = Quaternion.Euler(0, theta * Mathf.Rad2Deg, 0);
+    }
 
     public bool grounded()
     {
@@ -258,8 +301,9 @@ public abstract class BaseEnemy : MonoBehaviour
     #region Core Functions
     public virtual void Start()
     {
+        anim = gameObject.transform.GetChild(0).GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        player = GameObject.FindGameObjectWithTag(glob.playerTag);
+        player = mas.player.GetPlayer().gameObject;
         cc = player.gameObject.GetComponent<CombatController>();
         GetComponent<AudioSource>().volume = 0;
         StartCoroutine(LoudIDK());
@@ -268,6 +312,19 @@ public abstract class BaseEnemy : MonoBehaviour
 
     public virtual void Update()
     {
+        if (player != null)
+        {
+            LookAtPlayer();
+        }
+        else
+        {
+            player = mas.player.GetPlayer().gameObject;
+        }
+        if (!(this is MalachaiController mc))
+        {
+            anim.SetBool("attacking", attacking);
+        }
+
         if (grounded())
         {
             // airMultiplier = 1f;

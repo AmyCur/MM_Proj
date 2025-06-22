@@ -15,8 +15,14 @@ namespace AmyCurr.Settings
 
     public static class Settings
     {
+        public static class Development
+        {
+            public static bool devMode = true;
+        }
+
         public static class Language
         {
+
             public static languages language = languages.english;
 
             public static void ChangeLanguage(languages l, bool updateLanguage = true)

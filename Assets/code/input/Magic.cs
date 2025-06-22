@@ -1,10 +1,17 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Magical
 {
+    public enum tags
+    {
+        dev
+    }
+
     public static class keys
     {
+
         //* Movement
         public static KeyCode[] left = { KeyCode.LeftArrow, KeyCode.A };
         public static KeyCode[] right = { KeyCode.RightArrow, KeyCode.D };
@@ -26,14 +33,34 @@ namespace Magical
 
         public static KeyCode[] goToSpawnKey = { KeyCode.F6 };
 
-        public static KeyCode[] pause = { KeyCode.Escape, KeyCode.Tab};
+        public static KeyCode[] pause = { KeyCode.Escape, KeyCode.Tab };
         // public static KeyCode[] respawnKey = {KeyCode.}
+
+
+        public static Dictionary<KeyCode[], List<tags>> tagDict = new(){
+          {killAllKey, new(){tags.dev}}
+        };
     }
 
     public static class magic
     {
         public static class key
         {
+            public static bool isDev(KeyCode[] key)
+            {
+                List<tags> tgs = keys.tagDict[key];
+                if (tgs.Count != 0)
+                {
+                    foreach (tags t in tgs)
+                    {
+                        if (t == tags.dev)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
             public static bool down(KeyCode[] key)
             {
                 if (key.Length > 0)

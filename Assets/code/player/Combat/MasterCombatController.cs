@@ -202,8 +202,9 @@ namespace MasterCombatController            // This is a namespace so it can be 
                     Die(cc, null);
                 }
 
-                else if (cc.health > 100)
+                else if (cc.health > 100 && !cc.god)
                 {
+
                     cc.health = 100;
                 }
             }
@@ -244,7 +245,7 @@ namespace MasterCombatController            // This is a namespace so it can be 
 
                     if (hit != Vector3.zero)
                     {
-                        if (!(dr is MalachaiController))
+                        if (!(dr is MalachaiController || dr is DisabledEnemy))
                         {
                             KB.TakeKnockback(dr.gameObject, hit, upForce);
                         }

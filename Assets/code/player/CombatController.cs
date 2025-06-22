@@ -37,6 +37,8 @@ public class CombatController : MonoBehaviour
     public AudioClip bowHit;
     public AudioClip bowKill;
 
+    public bool god;
+
     Vector3 sPos => transform.position;
     Vector3 tPos => Camera.main.transform.forward;
 
