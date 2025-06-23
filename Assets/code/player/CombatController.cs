@@ -37,6 +37,8 @@ public class CombatController : MonoBehaviour
     public AudioClip bowHit;
     public AudioClip bowKill;
 
+    GameObject bowObj;
+
     public bool god;
 
     Vector3 sPos => transform.position;
@@ -79,29 +81,45 @@ public class CombatController : MonoBehaviour
     #region Functions
     void SwitchWeapons()
     {
+      bool changed=true;
         if (canSwitchWeapon)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1) && bows[0] != null)
             {
                 currentWeapon = bows[0];
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2) && bows[1] != null)
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && bows[1] != null)
             {
                 currentWeapon = bows[1];
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3) && bows[2] != null)
+            else if (Input.GetKeyDown(KeyCode.Alpha3) && bows[2] != null)
             {
                 currentWeapon = bows[2];
             }
-            if (Input.GetKeyDown(KeyCode.Alpha4) && bows[3] != null)
+            else if (Input.GetKeyDown(KeyCode.Alpha4) && bows[3] != null)
             {
                 currentWeapon = bows[3];
             }
-
-            if (gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<MeshFilter>().mesh != currentWeapon.mesh)
-            {
-                gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<MeshFilter>().mesh = currentWeapon.mesh;
+            else{
+              changed = false;
             }
+
+
+            if(changed){
+              if(bowObj != null){
+                Destroy(bowObj);
+              }
+
+              bowObj = GameObject.Instantiate(currentWeapon.mesh, Vector3.zero, Quaternion.Euler(-90, 0, -90));
+              bowObj.transform.SetParent(gameObject.transform, false);
+              
+              // bowObj.transform.rotation = Quaternion.Euler(-90, transform.rotation.y, transform.rotation.z);
+            }
+
+                            // gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<MeshFilter>().mesh = currentWeapon.mesh.GetComponent<MeshFilter>().mesh;
+                // gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().materials = currentWeapon.mesh.GetComponent<MeshRenderer>().materials;
+                
+                // gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<MeshFilter>().mesh = currentWeapon.mesh;
 
         }
     }
@@ -172,6 +190,10 @@ public class CombatController : MonoBehaviour
     }
     void Update()
     {
+      if(bowObj != null){
+        var a = Camera.main.transform.rotation;
+        bowObj.transform.localEulerAngles = new Vector3(a.x-90,a.y,a.y-90);
+      }
 
         if (shouldAttack)
         {

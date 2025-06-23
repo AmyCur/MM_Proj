@@ -8,7 +8,7 @@ public class BowScriptable : ScriptableObject
     public float pullOutSpeed;
     public float putAwaySpeed;
     public float atkCD;
-    public Mesh mesh;
+    public GameObject mesh;
     public float kbForce;
     public float upForce;
 

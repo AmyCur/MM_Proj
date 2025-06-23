@@ -17,7 +17,7 @@ MonoBehaviour:
   pullOutSpeed: 0
   putAwaySpeed: 0
   atkCD: 0.1
-  mesh: {fileID: -8079195551229354099, guid: 17cdd46266feebe26af62ef5906506c6, type: 3}
+  mesh: {fileID: 971914700715004653, guid: e4ec5bdb6edf83f81ae41f5d12f410f8, type: 3}
   kbForce: 10
   upForce: 10
   e:
