@@ -31514,7 +31514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   english: Press space to jump
   spanish: Spanish
-  french: French
+  french: 'Appuyez sur espace pour sauter  '
   german: German
 --- !u!114 &1095135539
 MonoBehaviour:
@@ -33432,7 +33432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   english: Press W,A,S,D to move
   spanish: Spanish
-  french: French
+  french: "Appuyez sur W, A, S, D pour vous d\xE9placer"
   german: German
 --- !u!1 &1220176614
 GameObject:
@@ -76813,7 +76813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5085983396220078226, guid: d4211814a6a149142a4832bf221360ef, type: 3}
       propertyPath: health
-      value: 1000000000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5085983396220078226, guid: d4211814a6a149142a4832bf221360ef, type: 3}
       propertyPath: atkRadius

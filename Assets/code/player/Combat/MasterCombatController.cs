@@ -202,10 +202,10 @@ namespace MasterCombatController            // This is a namespace so it can be 
                     Die(cc, null);
                 }
 
-                else if (cc.health > 100 && !cc.god)
+                else if (cc.health > cc.maxHealth && !cc.god)
                 {
 
-                    cc.health = 100;
+                    cc.health = cc.maxHealth;
                 }
             }
         }

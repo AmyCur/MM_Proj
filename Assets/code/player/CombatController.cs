@@ -43,7 +43,9 @@ public class CombatController : MonoBehaviour
 
     Vector3 sPos => transform.position;
     Vector3 tPos => Camera.main.transform.forward;
-
+    
+    public readonly int maxHealth = 100;
+    
     #region Coroutines
     // Parses so that if you switch weapon, it will end the cd of other weapon and not this one (this is probably bad)
     IEnumerator Attack(BowScriptable w)
