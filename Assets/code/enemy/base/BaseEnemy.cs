@@ -22,7 +22,7 @@ namespace EnemyState
     }
 }
 
-
+[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AudioSource))]
 public abstract class BaseEnemy : MonoBehaviour
 {
@@ -89,9 +89,6 @@ public abstract class BaseEnemy : MonoBehaviour
     public List<AudioClip> audios;
     CombatController cc;
 
-    [Header("Animation")]
-
-    public Animator anim = new();
 
     #endregion
     #region Abstract Functions
@@ -301,7 +298,6 @@ public abstract class BaseEnemy : MonoBehaviour
     #region Core Functions
     public virtual void Start()
     {
-        anim = gameObject.transform.GetChild(0).GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         player = mas.player.GetPlayer().gameObject;
         cc = player.gameObject.GetComponent<CombatController>();
@@ -320,11 +316,7 @@ public abstract class BaseEnemy : MonoBehaviour
         {
             player = mas.player.GetPlayer().gameObject;
         }
-        if (!(this is MalachaiController mc))
-        {
-            anim.SetBool("attacking", attacking);
-        }
-
+          
         if (grounded())
         {
             // airMultiplier = 1f;

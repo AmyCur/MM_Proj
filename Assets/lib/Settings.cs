@@ -23,7 +23,7 @@ namespace AmyCurr.Settings
         public static class Language
         {
 
-            public static languages language = languages.french;
+            public static languages language = languages.english;
 
             public static void ChangeLanguage(languages l, bool updateLanguage = true)
             {

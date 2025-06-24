@@ -23,6 +23,9 @@ public class SwordsMan : BaseEnemy
         return new Vector3(td.x, 0, td.z);
     }
 
+    [Header("Animation")]
+
+    public Animator anim;
 
     void Push()
     {
@@ -104,12 +107,15 @@ public class SwordsMan : BaseEnemy
     public override void Update()
     {
         base.Update();
+        anim.SetBool("attacking", attacking);
+
         Push();
     }
 
     public override void Start()
     {
         base.Start();
+        anim = gameObject.transform.GetChild(0).GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
     #endregion
