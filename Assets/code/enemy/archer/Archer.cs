@@ -104,6 +104,8 @@ q               */
     {
         base.Start();
         arrows = new List<GameObject>();
+        anim.SetBool("attacking", inAttackRange());
+
     }
     #endregion
 

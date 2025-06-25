@@ -3,10 +3,8 @@ using AmyCurr.Settings;
 
 public class TranslateText : MonoBehaviour
 {
-    public string english;
-    public string spanish;
-    public string french;
-    public string german;
+    [TextArea(8,20)]
+    public string english, spanish, french, german;
 
     void Start()
     {

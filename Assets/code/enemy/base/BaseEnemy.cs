@@ -90,6 +90,10 @@ public abstract class BaseEnemy : MonoBehaviour
     CombatController cc;
 
 
+    [Header("Animation")]
+
+    public Animator anim;
+
     #endregion
     #region Abstract Functions
     public abstract IEnumerator Hunt();
@@ -117,6 +121,10 @@ public abstract class BaseEnemy : MonoBehaviour
         {
             GetComponent<MeshRenderer>().material = defaultMat;
         }
+    }
+    void Awake(){
+      if(!(this is MalachaiController))
+        anim = gameObject.transform.GetChild(0).GetComponent<Animator>();
     }
 
     const float checkWidth = 0.3f;
@@ -162,7 +170,7 @@ public abstract class BaseEnemy : MonoBehaviour
         //     transform.rotation = Quaternion.Euler(0, theta * Mathf.Rad2Deg, 0);
     }
 
-    public bool grounded()
+    public virtual bool grounded()
     {
         Vector3 scale = gameObject.transform.localScale;
         Vector3 pos = gameObject.transform.position;

@@ -12,6 +12,7 @@ using MasterCombatController;
 //! The ai is STUPID so ALL objects MUST be curved!!!!!!!!!
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Animator))]
 public class SwordsMan : BaseEnemy
 {
 
@@ -23,9 +24,6 @@ public class SwordsMan : BaseEnemy
         return new Vector3(td.x, 0, td.z);
     }
 
-    [Header("Animation")]
-
-    public Animator anim;
 
     void Push()
     {
@@ -68,6 +66,11 @@ public class SwordsMan : BaseEnemy
         if (inAttackRange())
         {
             s = EState.attacking;
+            anim.SetBool("hunting", false);
+        }
+        else{
+          if(!attacking)
+              anim.SetBool("hunting", true);
         }
 
         yield return new WaitForSeconds(0.1f);
@@ -90,10 +93,12 @@ public class SwordsMan : BaseEnemy
         if (!playerInRange)
         {
             s = EState.hunting;
+            anim.SetBool("attacking", false);
         }
 
         else
         {
+            anim.SetBool("attacking", true);
             MCC.TakeDamage(mas.player.GetCombatController(), damage, Vector3.zero, null, new RayData(AttackEnums.Attacker.swordsman, 0, Vector3.zero, Vector3.zero));
         }
 
@@ -107,15 +112,14 @@ public class SwordsMan : BaseEnemy
     public override void Update()
     {
         base.Update();
-        anim.SetBool("attacking", attacking);
-
+        anim.SetBool("falling", !grounded());
         Push();
     }
+
 
     public override void Start()
     {
         base.Start();
-        anim = gameObject.transform.GetChild(0).GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
     #endregion
