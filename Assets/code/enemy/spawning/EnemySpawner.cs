@@ -58,12 +58,11 @@ public class EnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        var aE = allEnemies;
-
-        foreach(BaseEnemy be in aE){
-            if(be.s == EState.dead){
+        foreach (BaseEnemy be in allEnemies)
+        {
+            if (be.s == EState.dead && be != null)
+            {
                 Destroy(be.gameObject);
-                allEnemies.Remove(be);
             }
         }
     }

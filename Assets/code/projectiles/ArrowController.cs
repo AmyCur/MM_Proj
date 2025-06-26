@@ -27,7 +27,9 @@ public class ArrowController : ProjectileController
             Destroy(gameObject);    
         }
 
-        Archer a = parent.GetComponent<Archer>();
+        Archer a = null;
+
+        if (parent != null) a = parent.GetComponent<Archer>();
     
         if(a!=null){
             a.arrows.Remove(gameObject);

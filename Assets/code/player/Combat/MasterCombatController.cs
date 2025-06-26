@@ -245,7 +245,7 @@ namespace MasterCombatController            // This is a namespace so it can be 
 
                     if (hit != Vector3.zero)
                     {
-                        if (!(dr is MalachaiController || dr is DisabledEnemy))
+                        if (!((dr is MalachaiController || dr is DisabledEnemy) && dr != null))
                         {
                             KB.TakeKnockback(dr.gameObject, hit, upForce);
                         }
