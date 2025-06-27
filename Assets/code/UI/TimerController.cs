@@ -47,7 +47,7 @@ public class TimerController : MonoBehaviour
         }
 
         float f = float.Parse(new string(ntt.ToArray()));
-        return (Math.Round(f, 2)).ToString();
+        return (Math.Round(Math.Round(f, 2), 2)).ToString();
     }
 
     // Update is called once per frame

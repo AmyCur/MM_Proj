@@ -662,7 +662,10 @@ PrefabInstance:
       value: Dylan Curry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6416027368426128367, guid: b237625041a907e588fe5be9106cbdc7, type: 3}
+    - {fileID: 2208122205763264576, guid: b237625041a907e588fe5be9106cbdc7, type: 3}
+    - {fileID: 3397312264238633819, guid: b237625041a907e588fe5be9106cbdc7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b237625041a907e588fe5be9106cbdc7, type: 3}
